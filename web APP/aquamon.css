@@ -1,0 +1,119 @@
+.docs-layout-header {
+  background: url('./header.png') center / cover;
+  height: 120px;
+}
+.demo-layout-transparent .mdl-layout__header,
+.demo-layout-transparent .mdl-layout__drawer-button {
+  /* This background is dark, so we set text to white. Use 87% black instead if
+     your background is light. */
+  color: white;
+}
+
+.gateway{
+    background: url("./gateway.png") center / cover;
+    height: 44px;
+    width: 44px;
+}
+
+.arduino{
+    background: url("./arduino.png") center / cover;
+    height: 24px;
+    width: 36px;
+
+}
+
+.raspberry{
+    background: url("./raspberry-pi.png") center / cover;
+    height: 44px;
+    width: 44px;
+}
+
+.device-connected{
+    height: 15px;
+    width: 15px;
+    border-radius: 100px;
+    background: green;
+    display: inline-block;
+}
+
+.device-disconnected{
+    height: 15px;
+    width: 15px;
+    border-radius: 100px;
+    background: red;
+    display: inline-block;
+}
+
+.device-partial-connected{
+    height: 15px;
+    width: 15px;
+    border-radius: 100px;
+    background: yellow;
+    display: inline-block;
+}
+
+.entity-list li{
+        padding-right: 0;
+        height: 55px;
+    }
+
+    .entity-list ul li{
+        padding-right: 10px;
+        height: 70px;
+    }
+
+    .entity-list ul{
+        padding-left: 15px;
+    }
+
+.entity-list {
+  width: 200px;
+}
+.mdl-textfield {
+	padding-top: 10px;
+}
+
+.entity-name{
+    font-weight: bold;
+}
+
+li:hover{
+    transform: scale(1.02);
+    background: rgba(50, 70, 168,0.1);
+}
+
+.device-list{
+        display: none;
+    }
+
+    #map {
+       height: 360px;
+       width: 100%;
+       overflow: hidden;
+       float: left;
+       border: thin solid #333;
+       }
+      #capture {
+       height: 360px;
+       width: 480px;
+       overflow: hidden;
+       float: left;
+       background-color: #ECECFB;
+       border: thin solid #333;
+       border-left: none;
+       }
+
+
+.label {
+   color: #000;
+   background-color: white;
+   border: 1px solid #000;
+   font-family: "Lucida Grande", "Arial", sans-serif;
+   font-size: 12px;
+   text-align: center;
+   white-space: nowrap;
+   padding: 2px;
+}
+.label.green {
+   background-color: #58D400;
+}
