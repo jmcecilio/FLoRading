@@ -1,0 +1,65 @@
+#! /bin/sh
+PWD=$(pwd)
+case "$1" in
+    install)
+	make clean
+	make
+	echo "#! /bin/sh
+### BEGIN INIT INFO
+# Provides: lora_app_node
+# Required-Start: $syslog $all
+# Required-Stop: $syslog
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 6
+# Short-Description: Start daemon at boot time
+# Description: Enable service provided by daemon.
+### END INIT INFO
+	
+	
+case \"\$1\" in
+	start)
+	echo \"Lora Node is starting\"
+	# Starting Programm
+	sudo /home/pi/Desktop/embIoT/EWSN_app/RPI/lora_node
+	;;
+	
+	stop)
+	echo \"Lora Node is ending\"
+	# Ending Programm
+	sudo killall lora_node
+	;;
+	
+	*)
+	echo \"Use: /etc/init.d/lora_node {start|stop}\"
+	exit 1
+	;;
+	
+esac
+	
+exit 0" > lora_app_node
+
+	sudo mv lora_app_node /etc/init.d/lora_app_node
+	sudo chmod 755 /etc/init.d/lora_app_node
+	sudo update-rc.d lora_app_node defaults
+	;;
+
+    uninstall)
+	sudo update-rc.d -f lora_app_node remove
+	sudo rm /etc/init.d/lora_app_node
+	make clean
+	;;
+    start)
+	sudo /etc/init.d/lora_app_node start
+	;;
+    stop)
+	sudo /etc/init.d/lora_app_node stop
+	;;
+    *)
+	
+	echo "Use: /etc/init.d/lora_app_node {install|uninstall|start|stop}"
+	exit 1
+	;;
+	
+esac
+	
+exit 0
