@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AQUAMON</title>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+    />
+    <link
+      rel="stylesheet"
+      href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="aquamon.css">
+    <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+  </head>
+
+
+
+  <body>
+
+	<header class="docs-layout-header mdl-layout__header is-casting-shadow">
+      		<div class="mdl-layout__header-row"></div>
+                  <div id="header-page-content" class="page-content"></div>
+    	</header>
+
+
+	<!-- No header, and the drawer stays open on larger screens (fixed drawer). -->
+	<div class="mdl-layout mdl-js-layout mdl-layout--fixed-drawer">
+		<div class="mdl-layout__drawer">
+		    
+			<div class="demo-list-action mdl-list">
+				<div class="mdl-list__item">
+
+					<ul class="entity-list group-list mdl-list">
+                				<div class="mdl-textfield mdl-js-textfield mdl-textfield--expandable">
+                        				<label class="mdl-button mdl-js-button mdl-button--icon" for="sample6">
+                          					<i class="material-icons">search</i>
+                        				</label>
+                        				<div class="mdl-textfield__expandable-holder">
+                          					<input class="mdl-textfield__input" type="text" id="sample6">
+                          					<label class="mdl-textfield__label" for="sample-expandable">Expandable Input</label>
+                        				</div>
+                      				</div>
+                 
+                				<li class="mdl-list__item mdl-list__item--two-line group-item" name="group_1">
+                    					<span class="mdl-list__item-primary-content">
+                    						<span>West</span>
+                    						<span class="mdl-list__item-sub-title">6 devices</span>
+                    					</span>
+                    					<span class="mdl-list__item-secondary-content"></span>
+			
+                				</li>
+    
+    
+                				<ul class="entity-list device-list mdl-list" name="group_1">
+						    <li class="mdl-list__item mdl-list__item--two-line" value="1" name="Gateway10">
+							<span class="mdl-list__item-primary-content">
+								<span class="entity-name">Gateway 10</span>
+								<span class="mdl-list__item-sub-title"><span class="device-partial-connected"></span>Connected</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+							    <div >
+								<div class="gateway"></div>
+							    </div>
+							</span>
+						    </li>
+						    <li class="mdl-list__item mdl-list__item--two-line" value="25" name="Node11">
+							<span class="mdl-list__item-primary-content">
+								<span class="entity-name">Node 11</span>
+								<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+							    <div >
+								<div class="arduino"></div>
+							    </div>
+							</span>
+						    </li>
+						    <li class="mdl-list__item mdl-list__item--two-line" value="31" name="Node12">
+							<span class="mdl-list__item-primary-content">
+								<span class="entity-name">Node 12</span>
+								<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+							    <div >
+								<div class="arduino"></div>
+							    </div>                
+							</span>
+						    </li>
+
+						    <li class="mdl-list__item mdl-list__item--two-line" value="31" name="Node13">
+							<span class="mdl-list__item-primary-content">
+								<span class="entity-name">Node 13</span>
+								<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+							    <div >
+								<div class="raspberry"></div>
+							    </div>                
+							</span>
+						    </li>
+						    <li class="mdl-list__item mdl-list__item--two-line" value="25" name="Node14">
+							    <span class="mdl-list__item-primary-content">
+							    	<span class="entity-name">Node 14</span>
+							    	<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							    </span>
+							    <span class="mdl-list__item-secondary-content">
+								<div >
+								    <div class="arduino"></div>
+								</div>
+							    </span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line" value="31" name="Node15">
+							    <span class="mdl-list__item-primary-content">
+							    	<span class="entity-name">Node 15</span>
+							    	<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							    </span>
+							    <span class="mdl-list__item-secondary-content">
+								<div >
+								    <div class="arduino"></div>
+								</div>                
+							    </span>
+							</li>
+				    
+							<li class="mdl-list__item mdl-list__item--two-line" value="31" name="Node16">
+							    <span class="mdl-list__item-primary-content">
+							    	<span class="entity-name">Node 16</span>
+							    	<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							    </span>
+							    <span class="mdl-list__item-secondary-content">
+								<div >
+								    <div class="raspberry"></div>
+								</div>                
+							    </span>
+							</li>
+                				</ul>
+    
+						<li class="mdl-list__item mdl-list__item--two-line group-item" name="group_2">
+                    					<span class="mdl-list__item-primary-content">
+                    						<span>East</span>
+                    						<span class="mdl-list__item-sub-title">5 devices</span>
+                    					</span>
+                    					<span class="mdl-list__item-secondary-content"></span>
+			
+                				</li>
+    
+    
+                				<ul class="entity-list device-list mdl-list" name="group_2">
+						    <li class="mdl-list__item mdl-list__item--two-line" value="1" name="Gateway20">
+							<span class="mdl-list__item-primary-content">
+								<span class="entity-name">Gateway 20</span>
+								<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+							    <div >
+								<div class="gateway"></div>
+							    </div>
+							</span>
+						    </li>
+
+						    <li class="mdl-list__item mdl-list__item--two-line" value="25" name="Node21">
+							<span class="mdl-list__item-primary-content">
+								<span class="entity-name">Node 21</span>
+								<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+							    <div >
+								<div class="arduino"></div>
+							    </div>
+							</span>
+						    </li>
+						    <li class="mdl-list__item mdl-list__item--two-line" value="31" name="Node22">
+							<span class="mdl-list__item-primary-content">
+								<span class="entity-name">Node 22</span>
+								<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+							    <div >
+								<div class="arduino"></div>
+							    </div>                
+							</span>
+						    </li>
+
+						    <li class="mdl-list__item mdl-list__item--two-line" value="31" name="Node23">
+							<span class="mdl-list__item-primary-content">
+								<span class="entity-name">Node 23</span>
+								<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							</span>
+							<span class="mdl-list__item-secondary-content">
+							    <div >
+								<div class="raspberry"></div>
+							    </div>                
+							</span>
+						    </li>
+						    <li class="mdl-list__item mdl-list__item--two-line" value="25" name="Node24">
+							    <span class="mdl-list__item-primary-content">
+							    	<span class="entity-name">Node 24</span>
+							    	<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							    </span>
+							    <span class="mdl-list__item-secondary-content">
+								<div >
+								    <div class="arduino"></div>
+								</div>
+							    </span>
+							</li>
+							<li class="mdl-list__item mdl-list__item--two-line" value="31" name="Node25">
+							    <span class="mdl-list__item-primary-content">
+							    	<span class="entity-name">Node 25</span>
+							    	<span class="mdl-list__item-sub-title"><span class="device-disconnected"></span>Disconnected</span>
+							    </span>
+							    <span class="mdl-list__item-secondary-content">
+								<div >
+								    <div class="arduino"></div>
+								</div>                
+							    </span>
+							</li>
+
+
+
+						</ul>
+					</ul>
+
+				</div>
+
+			</div>
+  
+		</div>
+
+		<main class="mdl-layout__content">
+			<div class="mdl-grid">
+			  	<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet">
+
+					<div class="mdl-grid">    
+			                        <div class="mdl-cell mdl-cell--6-col">
+			                            <div id="realtime-chart"></div>
+			                        </div>
+
+			                        <div class="mdl-cell mdl-cell--6-col">
+			                            <div id="map"></div>
+			                        </div>
+		                         </div>
+
+
+				</div>
+			</div>
+			<div class="mdl-grid">
+  				<div class="mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet">
+
+		                    <div class="mdl-grid"> 
+					    <div class="mdl-cell mdl-cell--4-col">
+		                            <div id="energy-chart"></div>
+		                        </div>   
+		                        <div class="mdl-cell mdl-cell--4-col">
+		                            <div id="rssi-chart"></div>
+		                        </div>
+		                        <div class="mdl-cell mdl-cell--4-col">
+        		                    <div id="bar-chart"></div>
+        		                </div>
+        		            </div>  
+        		       </div>
+			</div>
+		  </main>
+	</div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.18.1/moment.min.js"></script>    
+
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <script src="aquamon.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBrbyExB6Hs2H84-DOHCPqqtIh9gtql9lg&callback=initMap"></script>
+
+  </body>
+</html>
